@@ -167,7 +167,7 @@ let currentAccount;
 btnLogin.addEventListener('click', e => {
   e.preventDefault();
   currentAccount = accounts.find(acc => {
-    return acc.username === inputLoginUsername.value;
+    return acc.username === inputLoginUsername.value.toLowerCase();
   });
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
